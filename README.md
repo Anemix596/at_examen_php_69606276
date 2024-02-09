@@ -62,3 +62,17 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Correcciones realizadas
+## Se llevaron a cabo pruebas de funcionalidad del sistema, identificando los siguientes errores:
+
+## 1. Se detectó la ausencia del archivo "vendor", para resolverlo se procedió a actualizar las dependencias mediante Composer.
+## 2. Se constató la falta del archivo ".env", ocasionando un error "500 SERVER ERROR" que indica un problema interno en el servidor. Para solventarlo, se creó el archivo ".env".
+## 3. Al realizar las migraciones, se creó la base de datos "Tienda_Libros". Durante este proceso, se encontró un error debido a una restricción en la longitud de las claves en la ## base de datos. Esta dificultad se subsanó modificando la configuración de Laravel en el archivo "AppServiceProvider.php", dentro del método "boot()", estableciendo una longitud ## predeterminada para las cadenas de caracteres.
+
+## Los errores fueron corregidos y se logró establecer la conexión con la base de datos, asegurando así el correcto funcionamiento del proyecto.
+
+
+## -------------------------------------------------------------------
+
+## Para el micro servicio se añadio un campo en la migracion prestamos denominada fecha_devolucion
